@@ -1,25 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div
+      class="min-h-screen bg-gradient-1 text-sm leading-[1.5714] text-desaturated-red"
+    >
+      <header>
+        <div class="p-8">
+          <a href="#">
+            <span class="sr-only"> Home </span>
+            <img
+              class="w-[clamp(6.25rem,26.667%,9.875rem)]"
+              src="images/logo.svg"
+              alt=""
+          /></a>
+        </div>
+      </header>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      <div aria-hidden="true">
+        <picture>
+          <source
+            media="(min-width: 62.5em)"
+            srcset="images/hero-desktop.jpg"
+          />
+          <img
+            src="images/hero-mobile.jpg"
+            alt=""
+            class="h-full w-full object-cover object-top"
+            draggable="false"
+          />
+        </picture>
+      </div>
 
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
+      <main>
+        <div class="mx-auto max-w-[524px] px-8 py-16">
+          <div class="mb-8 text-center">
+            <h1
+              class="mb-4 text-[2.5rem] font-light uppercase leading-[1.05] tracking-[0.27em]"
+            >
+              We're
+              <strong class="block font-semibold text-dark-grayish-red"
+                >coming soon</strong
+              >
+            </h1>
+            <p>
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals.
+            </p>
+          </div>
+          <form>
+            <label class="sr-only" for="email">Email</label>
+            <div class="relative">
+              <input
+                class="block h-12 w-full rounded-3xl border border-desaturated-red/50 bg-transparent px-6 pr-18 text-dark-grayish-red placeholder-desaturated-red focus:border-desaturated-red focus:outline-none"
+                placeholder="Email Address"
+                type="text"
+              />
+              <div
+                class="invisible absolute right-18 top-0 inline-flex h-12 items-center"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <g fill="none" fill-rule="evenodd">
+                    <circle cx="12" cy="12" r="12" fill="#F96464" />
+                    <path
+                      fill="#FFF"
+                      fill-rule="nonzero"
+                      d="M13.256 6v9.056h-2V6h2zm-.944 12.464c-.384 0-.699-.104-.944-.312a1.027 1.027 0 0 1-.368-.824c0-.33.125-.608.376-.832.25-.224.563-.336.936-.336.373 0 .68.112.92.336.24.224.36.501.36.832 0 .341-.117.616-.352.824-.235.208-.544.312-.928.312z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <button
+                class="absolute right-0 top-0 h-12 w-16 rounded-3xl bg-button-gradient text-dark-grayish-red shadow-xl shadow-button"
+                type="submit"
+                aria-label="Submit"
+              >
+                <svg
+                  class="mx-auto"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="20"
+                >
+                  <path
+                    fill="none"
+                    stroke="#FFF"
+                    stroke-width="2"
+                    d="M1 1l8.836 8.836L1 18.671"
+                  />
+                </svg>
+              </button>
+            </div>
+            <strong class="invisible mt-2 w-full px-6 text-soft-red"
+              >Please provide a valid email</strong
+            >
+          </form>
+        </div>
+      </main>
+    </div>
+    <!-- <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer> -->
     <script type="module" src="./src/main.js"></script>
+  </body>
 </html>

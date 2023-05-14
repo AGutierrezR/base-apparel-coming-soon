@@ -4,10 +4,32 @@ module.exports = {
   content: ['./*.html'],
   theme: {
     fontFamily: {
-      sans: ['san-serif'],
+      sans: ['Josefin Sans', 'san-serif'],
     },
-    fontWeight: {},
-    colors: {},
+    fontWeight: {
+      light: '300',
+      normal: '400',
+      semibold: '600',
+    },
+    colors: {
+      'desaturated-red': 'hsl(0, 36%, 70%)',
+      'soft-red': 'hsl(0, 93%, 68%)',
+      'dark-grayish-red': 'hsl(0, 6%, 24%)',
+      transparent: 'transparent',
+    },
+    boxShadowColor: {
+      button: 'hsla(0, 44%, 60%, 0.25)',
+    },
+    backgroundImage: {
+      'gradient-1': 'linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%)',
+      'button-gradient':
+        'linear-gradient(135deg, hsl(0, 70%, 88%) 0%, hsl(0, 74%, 74%) 100%)',
+    },
+    extend: {
+      spacing: {
+        18: '4.5rem',
+      },
+    },
   },
   plugins: [],
 }
