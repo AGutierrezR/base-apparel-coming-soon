@@ -14,14 +14,14 @@
   </head>
   <body>
     <div
-      class="min-h-screen bg-gradient-1 text-sm leading-[1.5714] text-desaturated-red"
+      class="min-h-screen bg-gradient-1 bg-contain bg-no-repeat text-sm leading-[1.5714] text-desaturated-red lg:grid lg:grid-cols-[minmax(2.5rem,0.8fr),max-content,minmax(2.5rem,1fr),auto] lg:grid-rows-[0.4fr,1fr,auto] lg:bg-pattern lg:text-base lg:leading-[1.75] min-[1441px]:bg-gradient-1"
     >
-      <header>
-        <div class="p-8">
+      <header class="lg:col-start-2 lg:flex">
+        <div class="p-8 lg:px-0 lg:pb-10 lg:pt-16">
           <a href="#">
             <span class="sr-only"> Home </span>
             <img
-              class="w-[clamp(6.25rem,26.667%,9.875rem)]"
+              class="w-[clamp(6.25rem,26.667%,9.875rem)] lg:w-min"
               src="images/logo.svg"
               alt=""
             />
@@ -29,26 +29,25 @@
         </div>
       </header>
 
-      <div aria-hidden="true">
+      <div class="lg:col-start-4 lg:row-span-full" aria-hidden="true">
         <picture>
-          <source
-            media="(min-width: 62.5em)"
-            srcset="images/hero-desktop.jpg"
-          />
+          <source media="(min-width: 64rem)" srcset="images/hero-desktop.jpg" />
           <img
             src="images/hero-mobile.jpg"
             alt=""
-            class="h-full w-full object-cover object-top"
+            class="h-screen w-auto object-cover object-top"
             draggable="false"
           />
         </picture>
       </div>
 
-      <main>
-        <div class="mx-auto max-w-[524px] px-8 py-16">
-          <div class="mb-8 text-center">
+      <main class="lg:col-start-2">
+        <div
+          class="mx-auto max-w-[524px] px-8 py-16 lg:mx-0 lg:max-w-[45ch] lg:p-0 lg:pt-3"
+        >
+          <div class="mb-8 text-center lg:mb-10 lg:text-left">
             <h1
-              class="mb-4 text-[2.5rem] font-light uppercase leading-[1.05] tracking-[0.27em]"
+              class="mb-4 text-[2.5rem] font-light uppercase leading-[1.05] tracking-[0.27em] lg:mb-[1.125rem] lg:text-[4rem]"
             >
               We're
               <strong class="block font-semibold text-dark-grayish-red"
@@ -65,19 +64,19 @@
             <label class="sr-only" for="email">Email</label>
             <div class="relative">
               <input
-                class="block h-12 w-full rounded-3xl border border-desaturated-red/50 bg-transparent px-6 pr-18 text-dark-grayish-red placeholder-desaturated-red focus:border-desaturated-red focus:outline-none"
+                class="block h-12 w-full rounded-full border border-desaturated-red/50 bg-transparent px-6 pr-18 text-dark-grayish-red placeholder-desaturated-red focus:border-desaturated-red focus:outline-none lg:h-14"
                 placeholder="Email Address"
                 type="text"
               />
               <div
-                class="invisible/ absolute right-18 top-0 inline-flex h-12 items-center"
+                class="invisible absolute right-18 top-0 inline-flex h-12 items-center lg:right-28 lg:h-14"
               >
                 <svg width="24" height="24">
                   <use href="./images/icon-error.svg#error"></use>
                 </svg>
               </div>
               <button
-                class="absolute right-0 top-0 h-12 w-16 rounded-3xl bg-button-gradient text-dark-grayish-red shadow-xl shadow-button"
+                class="absolute right-0 top-0 h-12 w-16 rounded-full bg-gradient-2 text-dark-grayish-red shadow-xl shadow-button hover:opacity-75 hover:shadow-2xl lg:h-14 lg:w-[100px]"
                 type="submit"
                 aria-label="Submit"
               >
@@ -92,15 +91,22 @@
           </form>
         </div>
       </main>
-    </div>
-    <!-- <footer>
-      <p class="attribution">
+
+      <footer
+        class="text-almost-black col-start-2 px-2 pt-5 text-center text-sm"
+      >
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          class="underline"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </p>
-    </footer> -->
+        >. Coded by
+        <a class="underline" href="https://github.com/AGutierrezR"
+          >Andres Gutierrez</a
+        >
+      </footer>
+    </div>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

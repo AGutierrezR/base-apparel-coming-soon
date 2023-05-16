@@ -21,9 +21,12 @@ module.exports = {
       button: 'hsla(0, 44%, 60%, 0.25)',
     },
     backgroundImage: {
-      'gradient-1': 'linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%)',
-      'button-gradient':
-        'linear-gradient(135deg, hsl(0, 70%, 88%) 0%, hsl(0, 74%, 74%) 100%)',
+      pattern:
+        'url(/images/bg-pattern-desktop.svg), linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%)',
+      'gradient-1':
+        'linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%)',
+      'gradient-2':
+        'linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%)',
     },
     extend: {
       spacing: {
