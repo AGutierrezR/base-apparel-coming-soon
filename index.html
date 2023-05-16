@@ -60,16 +60,18 @@
               and our launch deals.
             </p>
           </div>
-          <form>
+          <form x-data="form" @submit.prevent="validateForm()">
             <label class="sr-only" for="email">Email</label>
             <div class="relative">
               <input
                 class="block h-12 w-full rounded-full border border-desaturated-red/50 bg-transparent px-6 pr-18 text-dark-grayish-red placeholder-desaturated-red focus:border-desaturated-red focus:outline-none lg:h-14"
                 placeholder="Email Address"
                 type="text"
+                x-model="email.value"
               />
               <div
-                class="invisible absolute right-18 top-0 inline-flex h-12 items-center lg:right-28 lg:h-14"
+                class="absolute right-18 top-0 inline-flex h-12 items-center lg:right-28 lg:h-14"
+                x-show="!email.valid"
               >
                 <svg width="24" height="24">
                   <use href="./images/icon-error.svg#error"></use>
@@ -85,9 +87,11 @@
                 </svg>
               </button>
             </div>
-            <strong class="invisible mt-2 w-full px-6 text-soft-red"
-              >Please provide a valid email</strong
-            >
+            <strong
+              class="mt-2 w-full px-6 text-soft-red text-xs"
+              x-show="!email.valid"
+              x-text="email.message"
+            ></strong>
           </form>
         </div>
       </main>
